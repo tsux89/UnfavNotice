@@ -7,11 +7,11 @@ require 'tweetstream'
 require 'pp'
 
 # 定義
-CONSUMER_KEY = 'Z4OYJ9MYorsl9UtQzh2Eg'
-CONSUMER_SECRET = 'gnLMD0GFd6Ktzyn7judX8OHcXVFnMCpMYDCK1NPro'
+CONSUMER_KEY = ''
+CONSUMER_SECRET = ''
 
-OAUTH_TOKEN = '475861854-YsjfiCSRHPnLp34c3KA9aG0Ood2aXX6gwKfagqAA'
-OAUTH_TOKEN_SECRET = 'RJcK4SnUOEq88ZmfbQVF58Yx297b29fPrRaep3fknGk'
+OAUTH_TOKEN = ''
+OAUTH_TOKEN_SECRET = ''
 
 $host = Twitter::Client.new(
   :consumer_key       => CONSUMER_KEY,
