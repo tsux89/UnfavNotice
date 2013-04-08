@@ -16,9 +16,11 @@ GEM
       eventmachine (~> 1.0)
       http_parser.rb (~> 0.5)
       simple_oauth (~> 0.1)
+    eventmachine (1.0.3)
     eventmachine (1.0.3-x86-mingw32)
     faraday (0.8.7)
       multipart-post (~> 1.1)
+    http_parser.rb (0.5.3)
     http_parser.rb (0.5.3-x86-mingw32)
     multi_json (1.7.2)
     multipart-post (1.2.0)
@@ -33,7 +35,11 @@ GEM
       faraday (~> 0.8, < 0.10)
       multi_json (~> 1.0)
       simple_oauth (~> 0.2)
+    yajl-ruby (1.1.0)
     yajl-ruby (1.1.0-x86-mingw32)
+
+PLATFORMS
+  x86-mingw32
 
 DEPENDENCIES
   tweetstream
