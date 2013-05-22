@@ -30,22 +30,24 @@ end
 
 client = TweetStream::Client.new
 
+tweet = [aaaaaaaaaaaaaaaaaaaaa,
+        bbbbbbbbbbbbbbbbbbbbb,
+        ccccccccccccccccccccc,
+        ddddddddddddddddddddd]
+
+# 配列変数tweetには、あんふぁぼされた時に出力したいコメントを代入。
+
 client.on_event(:unfavorite) do |event|
   
-  #自分があんふぁぼ[した]ときに通知が飛んでくるのを防ぐ
+  
   if event[:target][:screen_name] =~ /x89/ then
-    $host.update("@#{event[:source][:screen_name]} (☞ ✹‿✹ )☞ あんふぁぼをみていたぞぉぉぉぉあああああああああああああああ！！！！！！！！！！！")
+    $host.update("@#{event[:source][:screen_name]} #{tweet.shuffle}")
   end
   
   pp event
   puts "===================="
   puts "@#{event[:source][:screen_name]}"
   
-  Thread.new{
-    f = open("unfavorite.log", "a")
-    f.write("\n@#{event[:source][:screen_name]} #{event[:source][:id]} #{Time.now}")
-    f.close
-  }
   
 end
 
